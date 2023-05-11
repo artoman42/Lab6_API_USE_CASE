@@ -1,0 +1,11 @@
+.table-container {
+  
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  margin-left: 200px;
+}
+
+.center-table {
+  margin-top: 20px; 
+}
