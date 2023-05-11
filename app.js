@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 
 app.get('/artoman42@gmail.com', async(req, res)=>{
     try{
-        res.render('inf');
+        res.render('info');
     }
     catch(exception){
         console.error(error);
@@ -39,7 +39,6 @@ app.get('/stock', async (req, res) => {
         sector: quote.sector,
         industry: quote.industry
       }));
-      
       res.render('index', {quotes : quotes});
     } catch (error) {
       console.error(error);
