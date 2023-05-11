@@ -6,6 +6,16 @@ const port = 3000;
 
 app.set('view engine', 'ejs');
 
+app.get('/artoman42@gmail.com', async(req, res)=>{
+    try{
+        res.render('inf');
+    }
+    catch(exception){
+        console.error(error);
+      res.status(500).json({ error: 'An error occurred' });
+    }
+})
+
 app.get('/stock', async (req, res) => {
     const options = {
       method: 'GET',
@@ -29,7 +39,7 @@ app.get('/stock', async (req, res) => {
         sector: quote.sector,
         industry: quote.industry
       }));
-      // Process the response data as needed
+      
       res.render('index', {quotes : quotes});
     } catch (error) {
       console.error(error);
